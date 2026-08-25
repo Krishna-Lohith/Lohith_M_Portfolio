@@ -88,9 +88,10 @@ export default function Hero({ start }: Props) {
           </h1>
 
           <p className="hero-sub mt-7 max-w-2xl text-base leading-relaxed text-muted md:text-lg">
-            I'm Lohith Mothukuri. I build ML and GenAI systems that score{' '}
-            <span className="text-ink">1M+ transactions a day</span> in production, and I ship
-            products of my own on the side.
+            I'm Lohith Mothukuri. I build{' '}
+            <span className="text-ink">agentic AI systems in production</span> at Visa - RAG
+            pipelines, multi-agent workflows, and fine-tuned LLMs - and I ship products of my own
+            on the side.
           </p>
 
           <div className="hero-ctas mt-9 flex flex-wrap items-center justify-center gap-4">

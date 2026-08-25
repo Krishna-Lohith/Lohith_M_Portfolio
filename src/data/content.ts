@@ -13,9 +13,9 @@ export const LINKS = {
 }
 
 export const STATS = [
-  { value: 1, suffix: 'M+', label: 'transactions scored daily', decimals: 0 },
-  { value: 4, suffix: '+', label: 'years building ML systems', decimals: 0 },
-  { value: 200, prefix: '<', suffix: 'ms', label: 'p95 inference latency', decimals: 0 },
+  { value: 4, suffix: '+', label: 'years across data, ML, and GenAI', decimals: 0 },
+  { value: 95, suffix: '%+', label: 'CodeGenie retrieval accuracy', decimals: 0 },
+  { value: 20, prefix: '-', suffix: '%', label: 'GenAI operating cost cut', decimals: 0 },
   { value: 2, suffix: '', label: 'products shipped solo', decimals: 0 },
 ]
 
@@ -31,16 +31,22 @@ export interface Job {
 export const EXPERIENCE: Job[] = [
   {
     company: 'Visa',
-    role: 'Machine Learning Engineer - Gen AI',
+    role: 'AI/ML Engineer',
     period: 'Aug 2024 - Present',
     location: 'Atlanta, GA',
     accent: 'cyan',
     bullets: [
-      { text: 'Dispute-propensity models (XGBoost, Optuna) with probability scoring across 1M+ daily transactions', metric: '+12% precision' },
-      { text: 'Anomaly-detection pipelines (Isolation Forest, PyTorch) strengthening fraud investigation', metric: '-15% false positives' },
-      { text: 'Agentic RAG pipeline (LangChain, LangGraph, FAISS, GPT-4) with context-window optimization', metric: '-35% lookup time' },
-      { text: 'AI-agent workflows with MCP, LLM outputs validated against JSON schemas via Pydantic', metric: '-25% malformed output' },
-      { text: 'FastAPI models on AWS Lambda with Prometheus and drift monitoring', metric: '<200ms p95' },
+      { text: 'Fraud- and anomaly-detection models (XGBoost, Optuna, Isolation Forest, PyTorch) with probability scoring for transaction risk and dispute propensity, plus MLflow-tracked MLOps from training to deployment', metric: '+12% precision' },
+      { text: 'Fine-tuned foundation LLMs (GPT-4, Claude) for financial-risk and regulatory-compliance tasks using LoRA, QLoRA, and PEFT, with a benchmarking harness measuring accuracy, latency, and cost' },
+      { text: "Shipped Visa's first GenAI-powered BI chatbot end to end, grounding answers on live transaction data via RAG, vector databases, and function calling, with multi-provider inference across GPT, Claude, and LLaMA" },
+      { text: 'Text2SQL agent turning natural language into daily reporting, integrated with Power BI so users see conversational answers beside visual transaction trends', metric: '-40% data-team reliance' },
+      { text: 'Operational Assistant on LangGraph and AWS Bedrock that auto-triages and routes tickets, plus ReAct agents pulling real-time logs for LLM root-cause analysis, governed by human-in-the-loop gates', metric: 'lower MTTR' },
+      { text: 'Multi-agent workflows (LangGraph, CrewAI, Semantic Kernel) wired to Jira, Confluence, GitHub, Checkmarx, Nexus IQ, and CI/CD through a custom MCP integration layer with PR-aware security remediation' },
+      { text: 'Built an MCP Registry and Agent-2-Agent (A2A) Registry as the single source of truth for deployed MCP servers and agents, with A2A protocol support for cross-agent orchestration' },
+      { text: 'Routed tasks across models by complexity (open-source, Claude Code, Codex) while holding quality steady, verified through the benchmarking harness', metric: '-20% GenAI cost' },
+      { text: 'Production observability and AI governance: deterministic and LLM-as-judge graders, LangSmith tracing, audit logging, and circuit-breaker guardrails', metric: '-30% review effort' },
+      { text: 'CodeGenie, a RAG-based enterprise code-and-architecture search using embedding retrieval and knowledge-graph injection, served via FastAPI on AWS (Bedrock, SageMaker, OpenSearch)', metric: '95%+ accuracy' },
+      { text: 'Deployed the agentic platform on Kubernetes (Amazon EKS/ECS) with Docker and Terraform, moving services off VMs and onboarding engineers through MCP and A2A walkthroughs' },
     ],
   },
   {
@@ -50,10 +56,12 @@ export const EXPERIENCE: Job[] = [
     location: 'Hyderabad, India',
     accent: 'amber',
     bullets: [
-      { text: 'Flight-cancellation classification on weather and crew data (XGBoost, Logistic Regression)', metric: '87% accuracy' },
-      { text: 'Feature engineering and preprocessing pipelines with Scikit-learn', metric: '-18% training variance' },
-      { text: 'Automated Airflow + S3 pipelines consolidating 5+ operational systems' },
-      { text: 'Power BI dashboards tracking load-factor and fuel KPIs across 3+ hubs' },
+      { text: 'Flight-cancellation classification on weather and crew data (XGBoost, Logistic Regression), enabling proactive operational planning', metric: '87% accuracy' },
+      { text: 'Feature engineering and preprocessing (Pandas, NumPy, SciPy, Scikit-learn) with encoding, scaling, and outlier handling', metric: '-18% training variance' },
+      { text: 'Cross-validation and ROC-AUC tuning of classification thresholds, balancing false cancellations against missed disruptions' },
+      { text: 'Automated Airflow + S3 ETL pipelines with validation checks, consolidating 5+ operational systems into model-ready datasets' },
+      { text: 'Flask REST API with scheduled batch scoring and drift monitoring to hold accuracy as seasonal flight patterns shifted' },
+      { text: 'Power BI dashboards (DAX, Redshift, DBT) tracking load-factor and fuel KPIs across 3+ hubs' },
     ],
   },
   {
@@ -63,10 +71,11 @@ export const EXPERIENCE: Job[] = [
     location: 'Hyderabad, India',
     accent: 'cyan',
     bullets: [
-      { text: 'Quantitative analysis for 5+ enterprise BFSI clients across risk and compliance' },
+      { text: 'Quantitative analysis and reporting for 5+ enterprise BFSI clients across risk, compliance, and operations' },
       { text: 'Oracle SQL migration and Power Query ETL workflows', metric: '+25% query speed' },
-      { text: 'Anomaly detection across 1M+ financial records, foundations for fraud modeling' },
-      { text: 'Automated reporting with Excel macros and Power BI Service', metric: '-40% manual effort' },
+      { text: '10+ interactive Power BI dashboards (DAX, data modeling) accelerating finance-stakeholder decisions' },
+      { text: 'EDA and feature engineering detecting anomalies across 1M+ financial records, building foundations for fraud modeling' },
+      { text: 'Automated reporting (Excel macros, Power BI Service) with data-quality and governance frameworks', metric: '-40% manual effort' },
     ],
   },
   {
@@ -76,42 +85,42 @@ export const EXPERIENCE: Job[] = [
     location: 'Hyderabad, India',
     accent: 'amber',
     bullets: [
-      { text: 'Cleaned and validated real-estate transaction datasets with SQL quality checks' },
-      { text: '15+ recurring leasing and operations reports', metric: '-30% prep time' },
+      { text: 'Cleaned and validated real-estate transaction datasets with Excel and SQL data-quality checks' },
+      { text: '15+ recurring leasing and operations reports in Excel and Google Sheets', metric: '-30% prep time' },
     ],
   },
 ]
 
 export const SKILL_GROUPS = [
   {
+    title: 'Generative & Agentic AI',
+    items: ['RAG', 'Multi-Agent Workflows', 'ReAct Agents', 'Function Calling', 'LoRA / QLoRA / PEFT', 'Prompt Engineering', 'Guardrails', 'Human-in-the-Loop', 'Knowledge Graphs'],
+  },
+  {
+    title: 'LLM & Agent Frameworks',
+    items: ['LangChain', 'LangGraph', 'LangSmith', 'CrewAI', 'Semantic Kernel', 'MCP', 'A2A Protocol', 'GPT-4 / Claude / LLaMA', 'FAISS / Pinecone / ChromaDB'],
+  },
+  {
     title: 'Machine Learning',
-    items: ['XGBoost', 'Scikit-learn', 'Optuna', 'Isolation Forest', 'Statistical Modeling', 'Clustering'],
+    items: ['XGBoost', 'Scikit-learn', 'Optuna', 'Isolation Forest', 'Logistic Regression', 'Feature Engineering', 'Anomaly Detection', 'Statistical Modeling'],
   },
   {
-    title: 'Deep Learning',
-    items: ['PyTorch', 'TensorFlow', 'Keras', 'ANN / RNN', 'Fine-Tuning', 'RLHF'],
+    title: 'Deep Learning & NLP',
+    items: ['PyTorch', 'TensorFlow', 'Keras', 'ANN / RNN', 'NLP', 'Tokenization', 'Embeddings'],
   },
   {
-    title: 'GenAI & LLM',
-    items: ['LangChain', 'LangGraph', 'LlamaIndex', 'RAG / Agentic AI', 'GPT-4 / Claude', 'MCP', 'FAISS / Pinecone / ChromaDB', 'Hugging Face'],
+    title: 'MLOps, Cloud & Deployment',
+    items: ['AWS Bedrock', 'SageMaker', 'OpenSearch', 'Lambda / S3 / EC2', 'FastAPI', 'Flask', 'MLflow', 'Docker', 'Kubernetes (EKS/ECS)', 'Terraform', 'CI/CD', 'Observability'],
   },
   {
-    title: 'MLOps & Deployment',
-    items: ['FastAPI', 'MLflow', 'DVC', 'Docker', 'Prometheus', 'Evidently AI', 'Pydantic', 'CI/CD'],
-  },
-  {
-    title: 'Cloud & Data Eng',
-    items: ['AWS (EC2, Lambda, S3)', 'Airflow', 'Databricks', 'DBT', 'Redshift', 'PostgreSQL'],
-  },
-  {
-    title: 'Analytics & BI',
-    items: ['Python', 'SQL', 'Power BI', 'DAX', 'Advanced Excel', 'Data Governance'],
+    title: 'Data Engineering & BI',
+    items: ['Python', 'SQL (PostgreSQL, MySQL, Oracle)', 'Apache Airflow', 'DBT', 'Redshift', 'ETL Pipelines', 'Power BI / DAX', 'Data Governance'],
   },
 ]
 
 export const MARQUEE_ITEMS = [
-  'PyTorch', 'LangChain', 'XGBoost', 'GPT-4', 'AWS', 'FastAPI', 'RAG', 'LangGraph',
-  'TensorFlow', 'MLflow', 'FAISS', 'Docker', 'Airflow', 'Hugging Face', 'SQL', 'MCP',
+  'LangGraph', 'MCP', 'AWS Bedrock', 'RAG', 'CrewAI', 'PyTorch', 'XGBoost', 'A2A',
+  'LangChain', 'Terraform', 'Claude', 'FastAPI', 'Kubernetes', 'LoRA', 'SageMaker', 'MLflow',
 ]
 
 export interface Project {
@@ -142,10 +151,10 @@ export const PROJECTS: Project[] = [
       'Google OAuth and verified-email auth with photo listings',
       'Map-based search, saved rooms, reviews, and direct contact',
       'Admin moderation dashboard with automated removal emails',
-      'Sub-second loads on a zero-framework stack with near-zero infra spend',
-      'Currently integrating ML/AI: smarter matching and recommendations',
+      'Zero-framework stack: sub-second loads, near-zero infra spend',
+      'CDN edge deploys with CI smoke tests and uptime alerting',
     ],
-    stack: ['JavaScript (ES6)', 'Supabase', 'PostgreSQL + RLS', 'Vercel Serverless', 'Google OAuth 2.0', 'Resend API', 'Leaflet.js', 'GitHub Actions', 'Cloudflare'],
+    stack: ['JavaScript (ES6)', 'Supabase', 'PostgreSQL + RLS', 'Vercel Serverless', 'Google OAuth 2.0', 'Resend API', 'Leaflet.js', 'GitHub Actions', 'Cloudflare DNS'],
     highlights: [
       { label: 'Communities', value: '36+' },
       { label: 'Load time', value: '<1s' },
@@ -166,7 +175,7 @@ export const PROJECTS: Project[] = [
       'Blocks for text, links, images, video, audio, PDFs, and resumes',
       'Multi-page workspaces, starter templates, opt-in Explore directory',
       'Each site persisted as a single JSON block document with autosave',
-      'Sanitized user HTML to prevent stored XSS',
+      'Multi-tenant security via RLS and Supabase Auth, HTML sanitized against stored XSS',
       'Link enrichment via Microlink, YouTube Embed, and GitHub APIs',
     ],
     stack: ['Next.js 16', 'React 19', 'Supabase', 'PostgreSQL RLS', 'Vanilla JS canvas engine', 'Vercel'],
@@ -195,10 +204,25 @@ export const ML_PROJECTS = [
   },
 ]
 
+export const EDUCATION = [
+  {
+    degree: 'MS, Computer Science',
+    school: 'Auburn University at Montgomery',
+    location: 'Montgomery, AL',
+    period: '2023 - 2025',
+  },
+  {
+    degree: 'BTech, Electronics & Communication Engineering',
+    school: 'Anurag University',
+    location: 'India',
+    period: '2016 - 2020',
+  },
+]
+
 export const IMPACT_METRICS = [
-  { label: 'Dispute-model precision lift', value: 12, unit: '%', dir: 'up' as const },
-  { label: 'False positives reduced', value: 15, unit: '%', dir: 'down' as const },
-  { label: 'Policy lookup time cut', value: 35, unit: '%', dir: 'down' as const },
-  { label: 'Malformed LLM output cut', value: 25, unit: '%', dir: 'down' as const },
-  { label: 'Manual reporting effort cut', value: 40, unit: '%', dir: 'down' as const },
+  { label: 'CodeGenie retrieval accuracy', value: 95, unit: '%', dir: 'up' as const },
+  { label: 'Data-team reliance for reporting cut', value: 40, unit: '%', dir: 'down' as const },
+  { label: 'Developer code-review effort cut', value: 30, unit: '%', dir: 'down' as const },
+  { label: 'GenAI operating cost cut', value: 20, unit: '%', dir: 'down' as const },
+  { label: 'Fraud-detection precision lift', value: 12, unit: '%', dir: 'up' as const },
 ]

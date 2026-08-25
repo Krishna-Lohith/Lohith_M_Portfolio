@@ -1,8 +1,9 @@
 import { useEffect, useRef } from 'react'
 import SectionHeading from '../components/SectionHeading'
+import { EDUCATION } from '../data/content'
 import { gsap, reveal, SplitText, prefersReducedMotion } from '../lib/motion'
 
-const KEYWORDS = ['Agentic RAG', 'Fraud & Risk ML', 'LLM Pipelines', 'MLOps', 'Full ML Lifecycle', 'Product Builder']
+const KEYWORDS = ['Agentic AI', 'RAG Pipelines', 'LLM Fine-Tuning', 'MCP & A2A', 'Fraud & Risk ML', 'MLOps', 'Product Builder']
 
 export default function About() {
   const rootRef = useRef<HTMLElement>(null)
@@ -79,14 +80,15 @@ export default function About() {
 
         <div>
           <p className="about-copy text-lg leading-relaxed text-muted md:text-xl md:leading-relaxed">
-            Four years ago I was cleaning real-estate spreadsheets. Today my models decide, in
-            under 200 milliseconds, whether a transaction at{' '}
-            <span className="text-ink">Visa</span> looks suspicious. In between: fraud analytics
-            for BFSI clients, flight-cancellation prediction at{' '}
+            Four years ago I was cleaning real-estate spreadsheets. Today I build the agents behind{' '}
+            <span className="text-ink">Visa's</span> first GenAI-powered BI chatbot and its
+            internal developer-productivity platform - RAG pipelines, multi-agent workflows, and
+            fine-tuned LLMs running on Bedrock and Kubernetes. In between: fraud and compliance
+            analytics for BFSI clients, flight-cancellation prediction at{' '}
             <span className="text-ink">American Airlines</span>, an MS in Computer Science from
-            Auburn University, and a habit of shipping side products people actually use. I care
-            about the unglamorous parts of ML - drift monitoring, schema validation, latency
-            budgets - because that is where models earn their keep in production.
+            Auburn University at Montgomery, and a habit of shipping side products people actually
+            use. I care about the unglamorous parts - guardrails, graders, tracing, audit logs -
+            because that is where AI systems earn their keep in production.
           </p>
 
           <div className="about-kws mt-9 flex flex-wrap gap-2.5">
@@ -99,6 +101,17 @@ export default function About() {
               </span>
             ))}
           </div>
+
+          <dl className="about-edu mt-10 space-y-4 border-t border-white/5 pt-8">
+            <dt className="font-mono text-[10px] tracking-[0.3em] text-accent">EDUCATION</dt>
+            {EDUCATION.map((e) => (
+              <dd key={e.degree} className="flex flex-wrap items-baseline gap-x-3">
+                <span className="text-sm font-semibold text-ink">{e.degree}</span>
+                <span className="text-sm text-muted">{e.school}</span>
+                <span className="font-mono text-xs text-muted/70">{e.period}</span>
+              </dd>
+            ))}
+          </dl>
         </div>
       </div>
     </section>
